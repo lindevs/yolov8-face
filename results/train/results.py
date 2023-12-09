@@ -1,6 +1,6 @@
 import re
 
-path = 'yolov8l-face/results.txt'
+path = 'yolov8x-face/results.txt'
 
 with open(path) as file:
     text = file.read()
