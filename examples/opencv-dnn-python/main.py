@@ -27,35 +27,36 @@ if __name__ == '__main__':
     model.setInput(blob)
     outputs = model.forward()
 
-    outputs = np.array([cv2.transpose(outputs[0])])
+    outputs = cv2.transpose(outputs[0])
 
-    bboxes = []
+    boxes = []
     scores = []
-    for i in range(outputs.shape[1]):
-        _, max_score, _, _ = cv2.minMaxLoc(outputs[0][i][4:])
+    for i in range(outputs.shape[0]):
+        max_score = float(np.amax(outputs[i][4:]))
         if max_score >= opt.conf:
-            bbox = [
-                outputs[0][i][0] - (0.5 * outputs[0][i][2]),
-                outputs[0][i][1] - (0.5 * outputs[0][i][3]),
-                outputs[0][i][2],
-                outputs[0][i][3],
-            ]
-            bboxes.append(bbox)
+            boxes.append(
+                [
+                    (outputs[i][0] - (0.5 * outputs[i][2])) * scale,
+                    (outputs[i][1] - (0.5 * outputs[i][3])) * scale,
+                    outputs[i][2] * scale,
+                    outputs[i][3] * scale,
+                ]
+            )
             scores.append(max_score)
 
-    results = cv2.dnn.NMSBoxes(bboxes, scores, opt.conf, opt.iou)
+    results = cv2.dnn.NMSBoxes(boxes, scores, opt.conf, opt.iou)
 
     color = [0, 255, 0]
     for i in range(len(results)):
         idx = results[i]
-        x1 = round(bboxes[idx][0] * scale)
-        y1 = round(bboxes[idx][1] * scale)
-        w = round(bboxes[idx][2] * scale)
-        h = round(bboxes[idx][3] * scale)
+        x = round(boxes[idx][0])
+        y = round(boxes[idx][1])
+        w = round(boxes[idx][2])
+        h = round(boxes[idx][3])
         label = '%.2f' % scores[idx]
 
-        cv2.rectangle(img, (x1, y1, w, h), color, 1, cv2.LINE_AA)
-        cv2.putText(img, label, (x1 - 5, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1, cv2.LINE_AA)
+        cv2.rectangle(img, (x, y, w, h), color, 1, cv2.LINE_AA)
+        cv2.putText(img, label, (x - 5, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1, cv2.LINE_AA)
 
     cv2.imshow('Image', img)
     cv2.waitKey(0)
