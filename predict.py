@@ -6,7 +6,7 @@ from PIL import Image
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', type=str, default='weights/yolov8n-face-lindevs.pt', help='Weights path')
-    parser.add_argument('--source', type=str, default='images/bus.jpg')
+    parser.add_argument('--source', type=str, default='data/images/bus.jpg')
     parser.add_argument('--imgsz', type=int, default=640, help='Image size')
     parser.add_argument('--conf', type=float, default=0.75, help='Object confidence threshold for detection')
     parser.add_argument('--iou', type=float, default=0.7, help='Intersection over union (IoU) threshold for NMS')

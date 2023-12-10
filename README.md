@@ -59,8 +59,14 @@ The models have been trained on [WIDERFace](http://shuoyang1213.me/WIDERFACE/) d
 pip install -r requirements.txt
 ```
 
-### Prediction
+## Prediction
 
 ```shell
-python predict.py --weights weights/yolov8n-face-lindevs.pt --source images/bus.jpg
+python predict.py --weights weights/yolov8n-face-lindevs.pt --source data/images/bus.jpg
+```
+
+* OpenCV DNN
+
+```shell
+python examples/opencv-dnn-python/main.py --weights weights/yolov8n-face-lindevs.onnx --source data/images/bus.jpg
 ```
