@@ -50,3 +50,17 @@ The models have been trained on [WIDERFace](http://shuoyang1213.me/WIDERFACE/) d
 | YOLOv8m-Face | 95.73 | 94.47  | 84.55 |
 | YOLOv8l-Face | 96.26 | 95.03  | 85.43 |
 | YOLOv8x-Face | 96.33 | 95.16  | 85.80 |
+
+## Instructions
+
+## Installation
+
+```shell
+pip install -r requirements.txt
+```
+
+### Prediction
+
+```shell
+python predict.py --weights weights/yolov8n-face-lindevs.pt --source images/bus.jpg
+```
