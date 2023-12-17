@@ -1,0 +1,7 @@
+path: PROJECT_DIR/data/widerface
+train: train
+val: val
+test:
+
+names:
+  0: face
