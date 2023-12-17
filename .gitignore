@@ -1,6 +1,9 @@
 .idea
 venv
 weights
+WIDER_train.zip
+WIDER_val.zip
+wider_face_split.zip
 data/widerface
 data/WIDER_train
 data/WIDER_val

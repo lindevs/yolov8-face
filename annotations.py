@@ -33,7 +33,7 @@ def process(images, labels, output):
             cy = (data[1] + data[3] / 2) / height
             w = data[2] / width
             h = data[3] / height
-            label = f"0 {cx} {cy} {w} {h}"
+            label = f'0 {cx} {cy} {w} {h}'
             if label not in annotations[filename]:
                 annotations[filename].append(label)
 
