@@ -45,11 +45,11 @@ def process(images, labels, output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train-images', type=str, default='data/WIDER_train/images')
-    parser.add_argument('--val-images', type=str, default='data/WIDER_val/images')
-    parser.add_argument('--train-labels', type=str, default='data/wider_face_split/wider_face_train_bbx_gt.txt')
-    parser.add_argument('--val-labels', type=str, default='data/wider_face_split/wider_face_val_bbx_gt.txt')
-    parser.add_argument('--output', type=str, default='data/widerface')
+    parser.add_argument('--train-images', default='data/WIDER_train/images')
+    parser.add_argument('--val-images', default='data/WIDER_val/images')
+    parser.add_argument('--train-labels', default='data/wider_face_split/wider_face_train_bbx_gt.txt')
+    parser.add_argument('--val-labels', default='data/wider_face_split/wider_face_val_bbx_gt.txt')
+    parser.add_argument('--output', default='data/widerface')
     opt = parser.parse_args()
 
     train_output = os.path.join(opt.output, 'train')

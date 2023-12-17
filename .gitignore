@@ -1,6 +1,7 @@
 .idea
 venv
 weights
+*.pt
 WIDER_train.zip
 WIDER_val.zip
 wider_face_split.zip

@@ -70,3 +70,39 @@ python predict.py --weights weights/yolov8n-face-lindevs.pt --source data/images
 ```shell
 python examples/opencv-dnn-python/main.py --weights weights/yolov8n-face-lindevs.onnx --source data/images/bus.jpg
 ```
+
+## Training
+
+* Download WIDERFace dataset and annotations:
+
+```shell
+python download.py
+```
+
+* Convert annotations to YOLO format:
+
+```shell
+python annotations.py
+```
+
+* Copy `widerface.yaml.example` file to `widerface.yaml`:
+
+```shell
+python data_file.py
+```
+
+* Start training:
+
+```shell
+python train.py --weights yolov8n.pt --epochs 300 2>&1 | tee -a results.txt
+python train.py --weights yolov8s.pt --epochs 200 2>&1 | tee -a results.txt
+python train.py --weights yolov8m.pt --epochs 120 2>&1 | tee -a results.txt
+python train.py --weights yolov8l.pt --epochs 110 2>&1 | tee -a results.txt
+python train.py --weights yolov8x.pt --epochs 240 --optimizer SGD --lrf 1e-5 --weight-decay 5e-3 2>&1 | tee -a results.txt
+```
+
+* Resume training:
+
+```shell
+python train.py --weights runs/detect/train/weights/last.pt --resume 2>&1 | tee -a results.txt
+```

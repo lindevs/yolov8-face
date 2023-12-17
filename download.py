@@ -29,7 +29,7 @@ def show_progress(count, block_size, total_size):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output', type=str, default='data')
+    parser.add_argument('--output', default='data')
     opt = parser.parse_args()
 
     files = {

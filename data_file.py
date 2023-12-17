@@ -4,7 +4,7 @@ import os
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--example', type=str, default='data/widerface.yaml.example')
+    parser.add_argument('--example', default='data/widerface.yaml.example')
     opt = parser.parse_args()
 
     filename = os.path.splitext(os.path.relpath(opt.example))[0]
