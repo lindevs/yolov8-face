@@ -41,7 +41,7 @@ The models have been trained on [WIDERFace](http://shuoyang1213.me/WIDERFACE/) d
 | YOLOv8l-Face | 3.97 hours    | 110    | 16         | -                                                | [results.txt](results/train/yolov8l-face/results.txt) |
 | YOLOv8x-Face | 13.65 hours   | 240    | 16         | optimizer='SGD'<br>lrf=1e-5<br>weight_decay=5e-3 | [results.txt](results/train/yolov8x-face/results.txt) |
 
-* Validation results on WIDERFace dataset:
+* Evaluation results on WIDERFace dataset:
 
 | Name         | Easy  | Medium | Hard  |
 |--------------|-------|--------|-------|
@@ -137,4 +137,31 @@ python train.py --weights runs/detect/train/weights/last.pt --resume 2>&1 | tee 
 
 ```shell
 python validate.py --weights weights/yolov8n-face-lindevs.pt
+```
+
+## WIDERFace Evaluation
+
+* Prepare dataset.
+* Start prediction on validation set:
+
+```shell
+python widerface/predict.py --weights weights/yolov8n-face-lindevs.pt
+```
+
+* Install package:
+
+```shell
+pip install Cython
+```
+
+* Build extension:
+
+```shell
+cd widerface && python setup.py build_ext --inplace && cd ..
+```
+
+* Start evaluation:
+
+```shell
+python widerface/evaluate.py
 ```

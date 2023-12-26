@@ -1,6 +1,7 @@
 .idea
 venv
 weights
+runs
 *.pt
 WIDER_train.zip
 WIDER_val.zip
@@ -10,3 +11,7 @@ data/WIDER_train
 data/WIDER_val
 data/wider_face_split
 data/widerface.yaml
+widerface/results
+widerface/box_overlaps.c
+widerface/**/*.so
+widerface/**/*.o
