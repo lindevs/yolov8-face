@@ -8,7 +8,7 @@ been pre-trained by Lindevs from scratch.
 * **[2023-12-09]** YOLOv8x-Face model has been added.
 * **[2023-12-02]** YOLOv8n-Face, YOLOv8s-Face, YOLOv8m-Face and YOLOv8l-Face models has been added.
 
-## Pre-trained models
+## Pre-trained Models
 
 The models have been trained on [WIDERFace](http://shuoyang1213.me/WIDERFACE/) dataset using NVIDIA RTX 4090.
 [YOLOv8 models](https://github.com/ultralytics/ultralytics#models) were used as initial weights for training.
@@ -71,7 +71,7 @@ python predict.py --weights weights/yolov8n-face-lindevs.pt --source data/images
 python examples/opencv-dnn-python/main.py --weights weights/yolov8n-face-lindevs.onnx --source data/images/bus.jpg
 ```
 
-## Training
+## Prepare Dataset
 
 * Download WIDERFace dataset and annotations:
 
@@ -91,6 +91,9 @@ python annotations.py
 python data_file.py
 ```
 
+## Training
+
+* Prepare dataset.
 * Start training:
 
 ```shell
@@ -105,4 +108,13 @@ python train.py --weights yolov8x.pt --epochs 240 --optimizer SGD --lrf 1e-5 --w
 
 ```shell
 python train.py --weights runs/detect/train/weights/last.pt --resume 2>&1 | tee -a results.txt
+```
+
+## Validation
+
+* Prepare dataset.
+* Start validation:
+
+```shell
+python validate.py --weights weights/yolov8n-face-lindevs.pt
 ```
