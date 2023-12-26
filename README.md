@@ -71,7 +71,27 @@ python predict.py --weights weights/yolov8n-face-lindevs.pt --source data/images
 python examples/opencv-dnn-python/main.py --weights weights/yolov8n-face-lindevs.onnx --source data/images/bus.jpg
 ```
 
-## Prepare Dataset
+## Export
+
+* Install package:
+
+```shell
+pip install onnx
+```
+
+* Export to ONNX format:
+
+```shell
+python export.py --weights weights/yolov8n-face-lindevs.pt
+```
+
+* Or export to ONNX format using dynamic axis:
+
+```shell
+python export.py --weights weights/yolov8n-face-lindevs.pt --dynamic
+```
+
+## Dataset Preparation
 
 * Download WIDERFace dataset and annotations:
 
@@ -104,7 +124,7 @@ python train.py --weights yolov8l.pt --epochs 110 2>&1 | tee -a results.txt
 python train.py --weights yolov8x.pt --epochs 240 --optimizer SGD --lrf 1e-5 --weight-decay 5e-3 2>&1 | tee -a results.txt
 ```
 
-* Resume training:
+* Or resume training:
 
 ```shell
 python train.py --weights runs/detect/train/weights/last.pt --resume 2>&1 | tee -a results.txt

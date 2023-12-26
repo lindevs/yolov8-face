@@ -1,1 +1,4 @@
 ultralytics>=2.1.0
+
+### Optional - ONNX format
+# onnx>=1.15.0
