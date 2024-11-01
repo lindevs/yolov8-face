@@ -1,7 +1,7 @@
-ultralytics>=2.1.0
+ultralytics>=8.3.0
 
 ### Optional - ONNX format
-# onnx>=1.15.0
+# onnx>=1.17.0
 
 ### Optional - WIDERFace evaluation
 # Cython>=3.0.0

@@ -5,6 +5,7 @@ been pre-trained by Lindevs from scratch.
 
 ## Release Notes
 
+* **[2024-11-01]** Re-saved and re-uploaded PyTorch models to avoid the dill package usage warning.
 * **[2023-12-09]** YOLOv8x-Face model has been added.
 * **[2023-12-02]** YOLOv8n-Face, YOLOv8s-Face, YOLOv8m-Face and YOLOv8l-Face models has been added.
 
@@ -25,11 +26,11 @@ The models have been trained on [WIDERFace](http://shuoyang1213.me/WIDERFACE/) d
 
 | Name         | Model Size (MB) | Link                                                                                                                                                                                                    | SHA-256                                                                                                                              |
 |--------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| YOLOv8n-Face | 6.3<br>12.2     | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8n-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8n-face-lindevs.onnx) | a72e65818b9d61b15d6b5f58996b2391c827f4508c5725706cf61d05a9a70e49<br>3ebbeaddfe4fc51a9ab119a4c67cc6193b559b07a8104d029ba0e146fcaa2ad4 |
-| YOLOv8s-Face | 22.5<br>44.7    | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8s-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8s-face-lindevs.onnx) | 3c9962b02c911b0ff6e4bb5d634f6e72d0d8ba24ca3442287f280ba50bfe2f73<br>0bf65e2576c05f25a5d5454b57b313d54d41495b044e94eae25bb1205e5d8d18 |
-| YOLOv8m-Face | 52.0<br>103.6   | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8m-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8m-face-lindevs.onnx) | 2d96e2eac09fcac4a677664680beee1c210041d0eb7e2f6a434fb806d455b2dc<br>5c40fbed7e8c2328ccaca718eb9ce49e5d631ae622c275dbd569ef4feab70ebd |
-| YOLOv8l-Face | 87.6<br>174.7   | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8l-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8l-face-lindevs.onnx) | a24036da36c2b8ce5e2985f70b3f8bc0bd1df3941f48e91ec84b48bdd73345b4<br>5037c8362da630935b35f32670b732d4d196bfcd6eff5052704bb9a568955e7f |
-| YOLOv8x-Face | 136.7<br>272.7  | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8x-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8x-face-lindevs.onnx) | 1985c9b08ee443f0fff646cc0371dbff9825415fb5e33d33bd2dc14bd73a56d7<br>28d9e9a85e8e739f824f280b0f426cc77b0984ebac6dbc30817ae8e3336ac97e |
+| YOLOv8n-Face | 6.0<br>11.7     | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8n-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8n-face-lindevs.onnx) | b038ca653b503453a94f6e12d76feca6840b2a97d7a1322b4498c5e922f29832<br>8d0bfb0c3383c5bd7a78dd24ef79a21e2aa456619b6ab5e53867092d1c7dc414 |
+| YOLOv8s-Face | 21.5<br>42.7    | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8s-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8s-face-lindevs.onnx) | fa7e47fe9378255e4b52cb7abc4e387c0353dd26b0b8e6834045dc9dfbaaf69f<br>0a6d19f2f68d7f0cc8104ab5c9eaa54b63e298f91dcfefd4be897f94a1561d02 |
+| YOLOv8m-Face | 49.6<br>98.8    | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8m-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8m-face-lindevs.onnx) | 303dcd997fb6ed446d1626b2bbd36f146894cdf600e33c4d563124f8c1b191c4<br>652f1ee6cd0291295de3d8fcaf9375ad62ef269055c0ada458bfdc4e7e6095da |
+| YOLOv8l-Face | 83.6<br>166.6   | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8l-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8l-face-lindevs.onnx) | 29cc43b27c8b865859c66489a4399a10a3efd80ce68ded9815364117641706d5<br>52dc39e46a7316398c95d30dd669a641382c9fdd8b675ad32aa65585bf820ea0 |
+| YOLOv8x-Face | 130.4<br>260.1  | [PyTorch](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8x-face-lindevs.pt)<br>[ONNX](https://github.com/lindevs/yolov8-face/releases/latest/download/yolov8x-face-lindevs.onnx) | 117c587c79e75e68a83e70200549bf6c035fa45b30e02fb41699639aadcfa0e6<br>0ddad01728bc5f7d6c68c9b5567cfd1c8257f041af607c215ed865c5442f87fa |
 
 * Training results:
 
