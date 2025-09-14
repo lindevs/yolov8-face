@@ -3,6 +3,12 @@
 The **YOLOv8-Face** repository provides pre-trained models designed specifically for face detection. The models have
 been pre-trained by Lindevs from scratch.
 
+## Similar Projects
+
+Other pre-trained models by Lindevs that you might find interesting:
+
+* [YOLOv9-Face](https://github.com/lindevs/yolov9-face)
+
 ## Release Notes
 
 * **[2024-11-01]** Re-saved and re-uploaded PyTorch models to avoid the dill package usage warning.
